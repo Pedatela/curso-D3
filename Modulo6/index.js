@@ -82,8 +82,16 @@ db.collection('dishes').get().then(res => {
     });
 
     update(data)
-    d3.interval(() => {
-        data[2].orders += 50
-        // update(data)
-    }, 1000)
+    // Changing Data
+    // d3.interval(() => {
+    //     data[2].orders += 50
+    //     update(data)
+    // }, 1000)
+
+    // Remove Data
+    // d3.interval(() => {
+    //     data.pop()
+    //     update(data)
+    // }, 3000)
+
 })
