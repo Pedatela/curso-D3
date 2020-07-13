@@ -75,13 +75,24 @@ const update = (data) => {
     yAxisGroup.call(yAxis);
 }
 
-db.collection('dishes').get().then(res => {
-    let data = [];
-    res.docs.forEach(doc => {
-        data.push(doc.data())
-    });
+let data = []
 
-    update(data)
+db.collection('dishes').onSnapshot(res => {
+    res.docChanges().forEach(change => {
+        console.log(change.type, change.doc.data())
+    });
+    // update()
+});
+
+
+
+// db.collection('dishes').get().then(res => {
+    // let data = [];
+    // res.docs.forEach(doc => {
+    //     data.push(doc.data())
+    // });
+
+    // update(data)
     // Changing Data
     // d3.interval(() => {
     //     data[2].orders += 50
@@ -94,4 +105,4 @@ db.collection('dishes').get().then(res => {
     //     update(data)
     // }, 3000)
 
-})
+// })
