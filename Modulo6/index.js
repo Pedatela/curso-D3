@@ -80,5 +80,10 @@ db.collection('dishes').get().then(res => {
     res.docs.forEach(doc => {
         data.push(doc.data())
     });
+
     update(data)
+    d3.interval(() => {
+        data[2].orders += 50
+        // update(data)
+    }, 1000)
 })
