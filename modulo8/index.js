@@ -9,7 +9,7 @@ form.addEventListener('submit', (e) => {
     if (name.value && cost.value) {
         const item = {
             name: name.value,
-            const: parseInt(cost.value)
+            cost: parseInt(cost.value)
         }
         db.collection('expenses').add(item).then(res => {
             error.textContent = "";
