@@ -28,6 +28,11 @@ const update = (data) => {
     const paths = graph.selectAll('paths')
         .data(pie(data));
 
+    // remove exit selections
+    paths.exit().remove();
+    // Update current shapes in the DOM
+    paths.attr('d', arcPath)
+
     paths.enter()
         .append('path')
         .attr('class', 'arc')
