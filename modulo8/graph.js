@@ -29,7 +29,10 @@ const update = (data) => {
         .data(pie(data));
 
     // remove exit selections
-    paths.exit().remove();
+    paths.exit()
+        .transition().duration(2500)
+        .attrTween('d', arcTweenExit)
+        .remove();
     // Update current shapes in the DOM
     paths.attr('d', arcPath)
 
@@ -74,6 +77,15 @@ const arcTweenEnter = (d) => {
     let i = d3.interpolate(d.endAngle, d.startAngle)
     return function (t) {
         d.startAngle = i(t)
+        return arcPath(d)
+    }
+}
+
+const arcTweenExit = (d) => {
+    // define interpolation
+    let i = d3.interpolate(d.startAngle, d.endAngle)
+    return function (t) {
+        d.endAngle = i(t)
         return arcPath(d)
     }
 }
