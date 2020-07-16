@@ -70,6 +70,11 @@ const update = (data) => {
         .attr('cy', d => y(d.distance))
         .attr('fill', '#ccc')
 
+    graph.selectAll('circle')
+        .on('mouseover', handleMouseOver)
+        .on('mouseleave', handleMouseOut)
+
+
     // create axes
     const xAxis = d3.axisBottom(x)
         .ticks(4)
@@ -113,3 +118,18 @@ db.collection('activities').onSnapshot(res => {
     });
     update(data)
 })
+
+// event handlers
+const handleMouseOver = (d, i, n) => {
+    d3.select(n[i])
+        .transition().duration(100)
+        .attr('r', 8)
+        .attr('fill', '#fff')
+}
+
+const handleMouseOut = (d, i, n) => {
+    d3.select(n[i])
+        .transition().duration(100)
+        .attr('r', 4)
+        .attr('fill', '#ccc')
+}
