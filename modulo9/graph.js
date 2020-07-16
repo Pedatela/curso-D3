@@ -29,6 +29,17 @@ const line = d3.line()
     .x(function (d) { return x(new Date(d.date)) })
     .y(function (d) { return y(d.distance) })
 
+// Creating Tooltip
+const tip = d3.tip()
+    .attr('class', 'tip card')
+    .html(d => {
+        let content = `<div class="date">${d.date}</div>`;
+        content += `<div class="distance">${d.distance}m</div>`;
+        return content
+    })
+
+graph.call(tip)
+
 // line path element
 const path = graph.append('path');
 
@@ -82,14 +93,20 @@ const update = (data) => {
     // add new points
     circles.enter()
         .append('circle')
-        .attr('r', 4)
+        .attr('r', 6)
         .attr('cx', d => x(new Date(d.date)))
         .attr('cy', d => y(d.distance))
         .attr('fill', '#ccc')
 
     graph.selectAll('circle')
-        .on('mouseover', handleMouseOver)
-        .on('mouseleave', handleMouseOut)
+        .on('mouseover', (d, i, n) => {
+            tip.show(d, n[i])
+            handleMouseOver(d, i, n)
+        })
+        .on('mouseleave', (d, i, n) => {
+            tip.hide(d, n[i])
+            handleMouseOut(d, i, n)
+        })
 
 
     // create axes
@@ -164,7 +181,7 @@ const handleMouseOver = (d, i, n) => {
 const handleMouseOut = (d, i, n) => {
     d3.select(n[i])
         .transition().duration(100)
-        .attr('r', 4)
+        .attr('r', 6)
         .attr('fill', '#ccc')
 
     // hide the dotted line group(.style, opacity)

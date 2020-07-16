@@ -31,3 +31,13 @@ form span{
     fill: #ccc;
     font-size: 14px;
 }
+.tip{
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    display: inline;
+}
+
+.distance{
+    text-align: center;
+}
