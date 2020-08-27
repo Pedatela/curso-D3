@@ -1,0 +1,22 @@
+[
+    {
+        "cor": "#E1499A",
+        "porcentagem": ".52",
+        "nome": "BTC"
+    },
+    {
+        "cor": "#f0ff08",
+        "porcentagem": ".35",
+        "nome": "ETH"
+    },
+    {
+        "cor": "#f0ff08",
+        "porcentagem": ".15",
+        "nome": "BCH"
+    },
+    {
+        "cor": "#f0ff08",
+        "porcentagem": ".60",
+        "nome": "Outros"
+    }
+]

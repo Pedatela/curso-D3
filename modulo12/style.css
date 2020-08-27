@@ -1,0 +1,21 @@
+
+  .radial__text {
+    fill: #7C9B40;
+    font-size: 36px;
+  }
+
+  .teste{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .tip{
+    padding: 0 30px;
+    background: #333;
+    color: #fff;
+}
+
+.tip-name  {
+  color: orangered;
+}
