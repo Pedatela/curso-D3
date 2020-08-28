@@ -76,6 +76,7 @@ const update = (data) => {
     const line = d3.line()
         .x(function (d) { return x(d.date) })
         .y(function (d) { return y(d.price) })
+        .curve(d3.curveNatural)
 
 
     // d3 line path generator
