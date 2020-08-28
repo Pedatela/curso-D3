@@ -1,0 +1,77 @@
+[
+    {
+        "name": "Portifolio",
+        "values": [
+            {
+                "date": "2002",
+                "price": 100
+            },
+            {
+                "date": "2003",
+                "price": 120
+            },
+            {
+                "date": "2004",
+                "price": 130
+            },
+            {
+                "date": "2005",
+                "price": 140
+            },
+            {
+                "date": "2006",
+                "price": 150
+            }
+        ]
+    },
+    {
+        "name": "SELIC",
+        "values": [
+            {
+                "date": "2002",
+                "price": 160
+            },
+            {
+                "date": "2003",
+                "price": 170
+            },
+            {
+                "date": "2004",
+                "price": 180
+            },
+            {
+                "date": "2005",
+                "price": 190
+            },
+            {
+                "date": "2006",
+                "price": 200
+            }
+        ]
+    },
+    {
+        "name": "TMA",
+        "values": [
+            {
+                "date": "2002",
+                "price": 210
+            },
+            {
+                "date": "2003",
+                "price": 50
+            },
+            {
+                "date": "2004",
+                "price": 40
+            },
+            {
+                "date": "2005",
+                "price": 260
+            },
+            {
+                "date": "2006",
+                "price": 250
+            }
+        ]
+    }
+]

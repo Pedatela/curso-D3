@@ -1,7 +1,6 @@
-const colors = ["red", "yellow", "green", "blue"];
 const twoPi = 2 * Math.PI;
-const radius = 120;
-const border = 14;
+const radius = 100;
+const border = 5;
 const padding = 50;
 const boxSize = (radius + padding) * 2;
 const currentSegment = d3.local();
@@ -52,7 +51,7 @@ d3.json('data.json').then(data => {
 
     paths.data(data)
         .enter().append("path")
-        .attr("fill", function (d, i) { return colors[i]; })
+        .attr("fill", function (d, i) { return d.cor; })
         .attr('class', 'foreground')
         .each(arcFunction)
         .transition().duration(2500)
