@@ -1,0 +1,149 @@
+#indicador-popup {
+    transform: translate(10px, -40%);
+    pointer-events: none !important;
+    z-index: 10000;
+    opacity: 0;
+
+  
+    position: fixed;
+    left: 20%;
+    top: 20%;
+    width: 300px;
+    padding: 30px 20px;
+    background: #444444;
+    color: white;
+    border-radius: 12px;
+  
+}
+
+#indicador-popup > h4{
+    font-size: 20px;
+}
+
+#indicador-popup > .metatexto {
+    font-style: italic;
+    opacity: 0.5;
+}
+
+#mandala-wrapper {
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    position: relative;
+  }
+
+  .legendas {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    display: flex;
+    justify-content: center;
+  }
+  #barsgroup {
+    position: relative;
+    z-index: 3;    
+  }
+
+  .mandala-bar {
+    position: relative;
+    /* fill: url('#gradienteInMeta'); */
+    stroke-width: 5;
+    stroke: #f2f2f2;
+    opacity: 1;
+    z-index: 1;
+  }
+
+  .legenda.areameta .icone-legenda{
+    background: rgba(255, 198, 124, 0.3);
+  }
+  .legenda.areameta .icone-legenda::after{
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      left: 0;
+      background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCc+CiAgPHJlY3Qgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPSdibGFjaycvPgogIDxwYXRoIGQ9J00tMSwxIGwyLC0yCiAgICAgICAgICAgTTAsMTAgbDEwLC0xMAogICAgICAgICAgIE05LDExIGwyLC0yJyBzdHJva2U9J3doaXRlJyBzdHJva2Utd2lkdGg9JzMnLz4KPC9zdmc+');
+      background-size: 5px 5px;
+      background-position: center;
+      background-repeat: repeat;
+      opacity: 0.06;
+    }
+
+  .legenda.nameta .icone-legenda {
+    background: #6db6b8;
+  }
+
+  .legenda.forameta .icone-legenda {
+    background: #b04c7e;
+  }
+
+  .legenda.semmeta .icone-legenda {
+    background: #888888;
+  }
+
+  .legenda {
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+    color: #888888;
+  }
+
+  .icone-legenda {
+    position: relative;
+    width: larg = 15px;
+    height: larg;
+    margin-right: 5px;
+    display: inline-block;
+    background: red;
+  }
+
+  #svg-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  #linegroup {
+    position: relative;
+    z-index: 10;
+    pointer-events: none;
+  }
+
+  .refline {
+    fill: none;
+    stroke-width: 0.3;
+    stroke: black;
+    stroke-dasharray: 6;
+    opacity: 0.1;
+  }
+
+  #metagroup {
+    position: relative;
+    z-index: 11;
+    pointer-events: none;
+  }
+
+  .metaline {
+    fill: none;
+    stroke-width: 3;
+    stroke: #ed7f30;
+    opacity: 1;
+    pointer-events: none;
+  }
+
+  .metalineEnd {
+    fill: none;
+    stroke-width: 3;
+    stroke: #ffa532;
+    opacity: 1;
+    pointer-events: none;
+  }
+
+  .metaarea {
+    fill: #ffa532;
+    opacity: 0.1;
+    pointer-events: none;
+  }
